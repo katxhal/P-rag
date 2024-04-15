@@ -1,0 +1,9 @@
+streamlit
+langchain-community
+ollama
+tiktoken  
+langchain-core
+chromadb  # if required by Chroma
+langchain  # if it's a separate package
+beautifulsoup4
+PyPDF2
