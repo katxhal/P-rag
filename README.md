@@ -1,5 +1,3 @@
-Here's a README file for your Katxhal RAG app based on our conversations:
-
 # Katxhal RAG App
 
 Katxhal RAG App is a Streamlit application that allows you to query PDF files or URLs using a Retrieval-Augmented Generation (RAG) approach. It combines the power of large language models (LLMs) with external data sources to provide accurate and context-aware responses.
