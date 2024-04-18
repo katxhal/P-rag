@@ -151,29 +151,6 @@ def call_to_pplx_pdf(pdf_file, question, api_key):
         print(f"Error: {response.status_code} - {response.text}")
         return None
 
-    # messages = [
-    #     {
-    #         "role": "system",
-    #         "content": f"You are a helpful assistant. Answering your question based on the following context:{context}",
-    #     },
-    #     {"role": "user", "content": f"{context}\n\nQuestion: {question}"},
-    # ]
-
-    # # messages = [
-    # #     {"role": "system", "content": "You are a helpful assistant."},
-    # #     {"role": "user", "content": f"{text}\n\nQuestion: {question}"},
-    # # ]
-
-    # client = OpenAI(
-    #     api_key=api_key, base_url="https://api.perplexity.ai/chat/completions"
-    # )
-    # response = client.chat.completions.create(
-    #     model="mistral-7b-instruct", messages=messages
-    # )
-
-    # answer = response.choices[0].message.content
-    # return answer
-
 
 def call_to_pplx_url(urls, question, api_key):
     # Convert string of URLs to list
@@ -236,25 +213,3 @@ def call_to_pplx_url(urls, question, api_key):
     else:
         print(f"Error: {response.status_code} - {response.text}")
         return None
-    # messages = [
-    #     {
-    #         "role": "system",
-    #         "content": f"You are a helpful assistant. Answering your question based on the following context:{context}",
-    #     },
-    #     {"role": "user", "content": f"{context}\n\nQuestion: {question}"},
-    # ]
-
-    # # messages = [
-    # #     {"role": "system", "content": "You are a helpful assistant."},
-    # #     {"role": "user", "content": f"{docs_text}\n\nQuestion: {question}"},
-    # # ]
-
-    # client = OpenAI(
-    #     api_key=api_key, base_url="https://api.perplexity.ai/chat/completions"
-    # )
-    # response = client.chat.completions.create(
-    #     model="mistral-7b-instruct", messages=messages
-    # )
-
-    # answer = response.choices[0].message.content
-    # return answer
