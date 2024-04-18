@@ -61,25 +61,3 @@ Contributions are welcome! Please open an issue or submit a pull request if you 
 ## License
 
 This project is licensed under the [Apache License](LICENSE).
-
-Citations:
-[1] https://pplx-res.cloudinary.com/image/upload/v1713467170/user_uploads/osyczwnwl/image.jpg
-[2] https://www.pinecone.io/learn/retrieval-augmented-generation/
-[3] https://stackoverflow.blog/2023/10/18/retrieval-augmented-generation-keeping-llms-relevant-and-current/
-[4] https://learn.microsoft.com/en-us/mem/intune/apps/apps-win32-add
-[5] https://www.datacamp.com/blog/what-is-retrieval-augmented-generation-rag
-[6] https://huggingface.co/datasets/RyokoAI/ShareGPT52K/blob/main/README.md
-[7] https://hyperight.com/7-practical-applications-of-rag-models-and-their-impact-on-society/
-[8] https://docs.divio.com/how-to/install-python-dependencies/
-[9] https://www.databricks.com/glossary/retrieval-augmented-generation-rag
-[10] https://aws.amazon.com/what-is/retrieval-augmented-generation/
-[11] https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/php-configuration-composer.html
-[12] https://docs.flutter.dev/packages-and-plugins/using-packages
-[13] https://huggingface.co/TheBloke/wizard-vicuna-13B-GPTQ/blob/main/README.md
-[14] https://stackoverflow.com/questions/6024027/how-do-i-package-and-run-a-simple-command-line-application-with-dependencies-usi
-[15] https://stackoverflow.com/questions/25654845/how-can-i-create-a-text-box-for-a-note-in-markdown
-[16] https://www.jetbrains.com/help/hub/markdown-syntax.html
-[17] https://developer.apple.com/documentation/xcode/adding-package-dependencies-to-your-app
-[18] https://gist.github.com/DomPizzie/7a5ff55ffa9081f2de27c315f5018afc
-[19] https://github.com/f/awesome-chatgpt-prompts/blob/main/README.md
-[20] https://packaging.python.org/en/latest/tutorials/managing-dependencies/
