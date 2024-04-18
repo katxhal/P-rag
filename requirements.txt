@@ -8,3 +8,5 @@ langchain  # if it's a separate package
 beautifulsoup4
 PyPDF2
 validators
+openai
+requests
