@@ -1,5 +1,6 @@
 import requests
 import streamlit as st
+from app.ui import error
 from utils.validators import url_validator
 from langchain_community.document_loaders import WebBaseLoader
 from langchain_community.vectorstores import Chroma
@@ -112,6 +113,7 @@ def process_url(urls, question, model):
 
 
 def call_to_pplx_pdf(pdf_file, question, api_key):
+    print("Calling Perplexity API...")
     # Read the PDF file
     pdf_reader = PdfReader(pdf_file)
     text = ""
@@ -128,7 +130,7 @@ def call_to_pplx_pdf(pdf_file, question, api_key):
     context = "\n".join(doc_splits)
 
     payload = {
-        "model": "mistral-7b-instruct",
+        "model": "mixtral-8x7b-instruct",
         "messages": [
             {"role": "system", "content": "You are a helpful assistant."},
             {"role": "user", "content": f"{context}\n\nQuestion: {question}"},
@@ -148,7 +150,9 @@ def call_to_pplx_pdf(pdf_file, question, api_key):
         answer = response.json()["choices"][0]["message"]["content"]
         return answer
     else:
-        print(f"Error: {response.status_code} - {response.text}")
+        error_message = f"Error: {response.status_code} - {response.text}"
+        print(error_message)  # Print the error message in the console (for debugging)
+        error(error_message, response)
         return None
 
 
@@ -191,7 +195,7 @@ def call_to_pplx_url(urls, question, api_key):
     context = "\n".join([doc.page_content for doc in doc_splits])
 
     payload = {
-        "model": "pplx-7b-online",
+        "model": "mixtral-8x7b-instruct",
         "messages": [
             {"role": "system", "content": "You are a helpful assistant."},
             {"role": "user", "content": f"{context}\n\nQuestion: {question}"},
@@ -211,5 +215,7 @@ def call_to_pplx_url(urls, question, api_key):
         answer = response.json()["choices"][0]["message"]["content"]
         return answer
     else:
-        print(f"Error: {response.status_code} - {response.text}")
+        error_message = f"Error: {response.status_code} - {response.text}"
+        print(error_message)  # Print the error message in the console (for debugging)
+        error(error_message, response)
         return None

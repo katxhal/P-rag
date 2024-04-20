@@ -10,3 +10,4 @@ PyPDF2
 validators
 openai
 requests
+streamlit-option-menu
