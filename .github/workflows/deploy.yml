@@ -15,7 +15,7 @@ jobs:
     - name: Build and Push Docker image
       run: |
         docker build -t xeera/prag .
-        docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} -p ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+        echo "${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}" | docker login -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin
         docker push xeera/prag
 
     - name: Deploy to Linode
