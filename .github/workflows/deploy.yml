@@ -14,9 +14,9 @@ jobs:
 
     - name: Build and Push Docker image
       run: |
-        docker build -t your-username/your-app .
+        docker build -t xeera/prag .
         docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} -p ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
-        docker push your-username/your-app
+        docker push xeera/prag
 
     - name: Deploy to Linode
       uses: appleboy/ssh-action@master
@@ -25,7 +25,7 @@ jobs:
         username: ${{ secrets.LINODE_USERNAME }}
         key: ${{ secrets.LINODE_SSH_KEY }}
         script: |
-          docker pull your-username/your-app
-          docker stop your-app || true
-          docker rm your-app || true
-          docker run -d --name your-app -p 80:8501 your-username/your-app
+          docker pull xeera/prag
+          docker stop prag || true
+          docker rm prag || true
+          docker run -d --name prag -p 80:8501 xeera/prag
