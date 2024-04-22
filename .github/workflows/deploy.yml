@@ -17,11 +17,6 @@ jobs:
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
-      
-    - name: Log Docker Hub Credentials
-      run: |
-        echo "Docker Hub Username: ${{ secrets.DOCKERHUB_USERNAME }}"
-        echo "Docker Hub Password: ${{ secrets.DOCKERHUB_TOKEN }}"
 
     - name: Build and Push Docker image
       run: |
@@ -38,4 +33,4 @@ jobs:
           docker pull xeera/prag
           docker stop prag || true
           docker rm prag || true
-          docker run -d --name prag -p 80:8501 xeera/prag
+          docker run -d --name prag -p 8501:8501 xeera/prag
