@@ -33,4 +33,4 @@ jobs:
           docker pull xeera/prag
           docker stop prag || true
           docker rm prag || true
-          docker run -d --name prag -p 80:8501 xeera/prag
+          docker run -d --name prag -p 8501:8501 xeera/prag
